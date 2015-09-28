@@ -1,0 +1,291 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 1024px) { /* medium size up */
+  #content {
+    width: 80%;
+  }
+
+  .issue_info {
+    width: 80%;
+  }
+
+  .button {
+    padding: 10px;
+  }
+}
+
+/* CONTENT */
+#content {
+  width: 90%;
+  margin: 0 auto 20px auto;
+}
+
+/* PAGINATION */
+.pagination {
+  text-align: center;
+}
+
+/* ISSUE */
+.issueList {
+  list-style: none;
+  padding: 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.comment,
+.issue {
+  width: 100%;
+  padding: 20px;
+  float: left;
+  clear: left;
+  margin-bottom: -1px;
+  border: 1px solid #ccc;
+  border-width: 0 0 1px 0;
+  box-sizing: border-box;
+}
+
+.issue {
+  cursor: pointer;
+}
+
+.issue .issue__info .issue__userMeta {
+  display: none;
+}
+
+.issue__info {
+  float: left;
+  width: 70%;
+}
+
+.issue__userMeta {
+  float: right;
+  text-align: right;
+}
+
+.issue__header {
+  float: left;
+  clear: left;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  width: 100%;
+}
+
+.issue__id {
+  color: #aaa;
+  margin-right: 5px;
+}
+
+.issue__title {
+  color: #000;
+}
+
+.issue__summary {
+  margin-top: 5px;
+  line-height: 18px;
+  clear: left;
+  overflow: auto;
+}
+
+.issue__user {
+  display: inline-block;
+  float: left;
+}
+
+.issue__state {
+  background-color: #6cc644;
+  color: #fff;
+  display: none;
+}
+
+.issue__state-closed {
+  background-color: #bd2c00;
+}
+
+.issue__commentCount {
+  float: left;
+  clear: left;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+
+/* ISSUE DETAIL VIEW */
+.issueDetail {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+  .issueDetail .issue {
+    cursor: default;
+  }
+
+    .issueDetail .issue .issue__userMeta {
+      display: none;
+    }
+
+    .issueDetail .issue .issue__info .issue__userMeta {
+      display: block;
+    }
+
+  .issueDetail .issue__state {
+    display: inline-block;
+  }
+
+  .issueDetail .issue__info {
+    width: 100%;
+  }
+
+  .issueDetail .issue__userMeta {
+    float: left;
+    clear: both;
+    text-align: left;
+    margin-top: 5px;
+  }
+
+  .issueDetail .user__avatar {
+    display: inline-block;
+    float: left;
+  }
+
+  .issueDetail .user__name {
+    display: inline-block;
+    float: left;
+    margin-top: 16px;
+    margin-left: 10px;
+  }
+
+  .issueDetail .issue__commentCount {
+    display: none;
+  }
+
+  .issueDetail .user__createdAt {
+    display: inline-block;
+    margin-top: 16px;
+    margin-left: 5px;
+  }
+  
+
+/* USER */
+.user__avatar {
+  width: 48px;
+  height: 48px;
+  border: 0;
+}
+
+.user__name {
+  display: block;
+}
+
+.user__createdAt {
+  display: none;
+}
+
+
+/* LABELS */
+.labels {
+  display: inline-block;
+}
+
+.label {
+  font-size: 12px;
+  padding: 2px 5px;
+  border-radius: 5px;
+  margin: 0 5px;
+  white-space: nowrap;
+}
+
+/* COMMENTS */
+.commentList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  float: left;
+  clear: both;
+  background-color: #eee;
+  width: 100%;
+}
+
+/* UTILITIES */
+.error {
+  color: #a61717;
+  background-color: #e3d2d2;
+  padding: 10px;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+/* BUTTON */
+.button {
+  cursor: pointer;
+  padding: 4px;
+  display: inline-block;
+  background: #fff;
+  margin-right: 5px;
+  border: 0;
+  font-size: 14px;
+}
+
+.button--disabled {
+  cursor: default;
+  color: #aaa;
+}
+
+.button--back {
+  margin: 20px 0;
+}
+
+/* SPINNER */
+.spinner {
+  margin: 20px auto;
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  border: 5px solid rgba(0, 0, 0, 0.2);
+  border-left-color: #000;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  animation: spin 1.1s infinite linear;
+  -webkit-animation: spin 1.1s infinite linear;
+}
+
+.spinner,
+.spinner:after {
+  border-radius: 50%;
+  width: 5em;
+  height: 5em;
+}
+
+@keyframes spin {
+  0% { 
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  0% { 
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+  }
+}
